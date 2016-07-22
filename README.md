@@ -90,7 +90,15 @@ L = ['Hello', 'World', 'IBM', 'Apple']
 [s.lower() for s in L]
 
 L = ['Hello', 'World', 18, 'Apple', None]
-[s.lower() for s in L if isinstance(s, str) ]
+>>>def process(x):
+	if isinstance(x, str):
+		x = x.lower()
+		return x
+	else:
+		x = x
+		return x
+>>>[process(x) for x in L]
+['hello', 'world', 18, 'apple', None]
 
 
 
